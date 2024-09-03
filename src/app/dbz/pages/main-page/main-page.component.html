@@ -1,0 +1,13 @@
+<h1>Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <dbz-lista-personajes [listaPersonajes]="personajes" (personajeEliminadoEmit)="onDeletePersonaje($event)"></dbz-lista-personajes>
+  </div>
+
+  <div class="col">
+    <dbz-agregar-personajes (personajeEmit)="onNewPersonaje($event)"></dbz-agregar-personajes>
+  </div>
+
+</div>

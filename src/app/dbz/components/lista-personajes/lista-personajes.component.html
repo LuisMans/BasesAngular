@@ -1,0 +1,15 @@
+<h4>Listado</h4>
+<ul>
+  <li *ngFor="let personaje of listaPersonajes; let i = index;
+  let isFirst = first;
+  let isLast = last;
+  let isEven = even;
+  let isOdd = odd;" [ngClass]="{
+    'list-group-item-dark': isLast }"
+
+  >
+    {{ personaje.nombre }} - {{ personaje.poder }}
+
+    <button (click)="borrarPersonaje(personaje.id)" class="btn btn-danger">Borrar</button>
+  </li>
+</ul>
